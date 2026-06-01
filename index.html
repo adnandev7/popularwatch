@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Popular Watches Nagpur | Luxury Timepieces Since 1985</title>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "primary": "#f2ca50",
+              "on-primary": "#131313",
+              "surface": "#1e1f20",
+              "background": "#131313"
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-[#ffe088] selection:text-slate-900">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 md:px-16 py-6 max-w-[1440px] mx-auto">
+            <a class="font-headline text-lg tracking-tighter text-[#f2ca50] glow-text-gold uppercase" href="index.html">
+                POPULAR WATCHES
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="index.html">Home</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="catalog.html">Catalog</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="heritage.html">Heritage</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="services.html">Services</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="cart-btn material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors duration-300 p-1">shopping_bag</button>
+                <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-[#f2ca50] p-1">menu</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-panel" class="fixed inset-y-0 right-0 z-50 w-64 bg-white border-l border-slate-200 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6 space-y-8">
+        <div class="flex justify-end">
+            <button id="close-mobile-menu-btn" class="material-symbols-outlined text-gray-400 hover:text-slate-900">close</button>
+        </div>
+        <div class="flex flex-col space-y-6">
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="index.html">Home</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="catalog.html">Catalog</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="heritage.html">Heritage</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="services.html">Services</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="dashboard.html">Admin Dashboard</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 zoom-hover">
+                <img class="w-full h-full object-cover opacity-50 scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-2XLaIdq1Pbr-z1xksXOq5uleLVB331W0Qov17cKR4UbRp-EEDB_tf0-X6WSGCD5T3RzzzCLOdjePVUJ4SQOWcnd7U45Curv9IFy7meadiKS8L0B5urt4T7J9IQt_X8kRPSqhxpFcnf09zPZ0gt8B1_PEpjf67YA-kDtQuhykTcF9XgTQQQOZDA9POCYywTPGsxOTZintqUPCgJ-Gfr8biNUx0NA4xIRXeabqXPbwymBHsIJstlygMjBo59Fh3YGYGFQnWQ5uetg" alt="Luxury mechanical watch movement close-up"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+            </div>
+            <div class="relative z-10 text-center px-6 md:px-16 reveal active">
+                <span class="font-label text-xs text-[#f2ca50] tracking-[0.5em] mb-6 block uppercase">ESTABLISHED 1985</span>
+                <h1 class="font-headline text-5xl md:text-7xl mb-8 max-w-4xl mx-auto leading-none text-slate-900 glow-text-gold">The Art of Chronometry</h1>
+                <div class="flex justify-center gap-6">
+                    <a href="catalog.html" class="px-8 py-3.5 bg-[#f2ca50] text-slate-900 font-semibold text-xs tracking-widest uppercase hover:bg-white transition-all duration-300">
+                        DISCOVER COLLECTIONS
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Spotlights -->
+        <section class="py-16 bg-slate-100 border-y border-slate-200 overflow-hidden reveal">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+                <div class="flex flex-wrap justify-between items-center opacity-30 hover:opacity-100 transition-opacity duration-700 gap-6">
+                    <span class="font-headline text-lg tracking-widest px-4 text-slate-900">ROLEX</span>
+                    <span class="font-headline text-lg tracking-widest px-4 text-slate-900">OMEGA</span>
+                    <span class="font-headline text-lg tracking-widest px-4 text-slate-900">PATEK PHILIPPE</span>
+                    <span class="font-headline text-lg tracking-widest px-4 text-slate-900">CARTIER</span>
+                    <span class="font-headline text-lg tracking-widest px-4 text-slate-900">AUDEMARS PIGUET</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="py-24 max-w-[1440px] mx-auto px-6 md:px-16 reveal">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span class="font-label text-xs text-[#b0afae] block mb-3 uppercase tracking-[0.2em]">Curated Selections</span>
+                    <h2 class="font-headline text-3xl md:text-4xl text-slate-900">NEW ARRIVALS</h2>
+                </div>
+                <a class="font-label text-xs text-[#f2ca50] border-b border-[#f2ca50] pb-1 hover:text-slate-900 hover:border-white transition-colors" href="catalog.html">VIEW ALL</a>
+            </div>
+
+            <!-- Dynamic New Arrivals Grid -->
+            <div id="new-arrivals-grid" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Javascript will load this dynamically -->
+            </div>
+        </section>
+
+        <!-- Dynamic Brand Spotlight Showcase -->
+        <section class="py-24 bg-slate-100 border-t border-slate-200 reveal">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="font-label text-xs text-[#f2ca50] uppercase tracking-widest block mb-4">Maison Focus</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-slate-900 leading-tight mb-8">Curated Heritage Timepiece</h2>
+                    <p class="font-body text-gray-400 text-base leading-relaxed mb-8">
+                        Our heritage collection honors enduring design and precision craft, with rare references curated for today's collector.
+                    </p>
+                    <a href="product.html?id=royal-oak" class="inline-flex items-center gap-2 font-label text-xs text-[#f2ca50] hover:text-slate-900 transition-colors">
+                        VIEW TIMEPIECE SPECIFICATIONS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="aspect-[4/3] bg-white border border-slate-200 overflow-hidden group relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5_cNjCphxzxmlrfOqG5Awy0JYt_PMXsMiaSGSGUkUpojb1exvhhVhWnQmg5YJe8Aj2QIIK_JyzV9dlcPdLWlYizemgBxexozUFO2hmiyrgfSPPTns9G8WO6PUyzuNCvuRhLgAPjOyOf2qeieUe7JTcGrbQd15yC3byJkR7L0j9VJOK6gldK42RmJDOXjcn2IzIovg8OFTuZu5VlDYZnOZlRHGtsw3IBXDXX_cLUSI7YMY3YH8X953slwbqnvyOYLpX0-w_kSk2Cc" alt="Timepiece close-up"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visit Our Boutique Nagpur -->
+        <section class="py-24 bg-background reveal">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-16 grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <span class="font-label text-xs text-[#f2ca50] block mb-4 tracking-widest uppercase">VISIT OUR SHOWROOM</span>
+                    <h2 class="font-headline text-4xl md:text-5xl text-slate-900 mb-8">NAGPUR</h2>
+                    <div class="space-y-6 max-w-md">
+                        <div class="border-b border-slate-200 pb-6">
+                            <p class="font-label text-[10px] text-gray-400 mb-1.5 uppercase tracking-widest">LOCATION</p>
+                            <p class="font-body text-base text-gray-300 leading-relaxed">Prestige Point, Civil Lines,<br/>Nagpur, MH 440001</p>
+                        </div>
+                        <div class="border-b border-slate-200 pb-6">
+                            <p class="font-label text-[10px] text-gray-400 mb-1.5 uppercase tracking-widest">HOURS</p>
+                            <div class="flex justify-between text-sm text-gray-300">
+                                <p class="font-body">Mon — Sat</p>
+                                <p class="font-body">11:00 AM — 08:30 PM</p>
+                            </div>
+                        </div>
+                        <a href="services.html" class="flex items-center gap-4 group">
+                            <span class="font-label text-xs text-[#f2ca50] group-hover:tracking-[0.15em] transition-all duration-300">SCHEDULE PRIVATE VIEWING</span>
+                            <span class="material-symbols-outlined text-[#f2ca50] text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Stylized Map Placeholder -->
+                <div class="order-1 md:order-2 h-[450px] bg-slate-100 border border-slate-200 overflow-hidden relative flex items-center justify-center grayscale contrast-125 opacity-70 hover:opacity-100 hover:grayscale-0 transition-all duration-700">
+                    <div class="text-center z-10">
+                        <span class="material-symbols-outlined text-5xl text-[#f2ca50] mb-3" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                        <p class="font-label text-xs text-slate-900 tracking-widest uppercase">CIVIL LINES, NAGPUR</p>
+                    </div>
+                    <div class="absolute inset-0 bg-white/80"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-16">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4 space-y-6">
+                <a class="font-headline text-xl text-[#f2ca50] block uppercase tracking-tight" href="index.html">POPULAR WATCHES</a>
+                <p class="font-body text-gray-400 text-sm max-w-sm leading-relaxed">
+                    Nagpur's premier destination for luxury timepieces and horological expertise since 1985. Experience precision, authority, and curation.
+                </p>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COLLECTIONS</h4>
+                <div class="flex flex-col space-y-2.5">
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wristwatch">Wristwatches</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wall Clock">Wall Clocks</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Table Clock">Table Clocks</a>
+                </div>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COMPANY</h4>
+                <div class="flex flex-col space-y-2.5">
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html">Our Legacy</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html#workshop">Master Workshop</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="services.html">Boutique Services</a>
+                </div>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">newsletter</h4>
+                <div class="flex border-b border-slate-300 pb-1">
+                    <input class="bg-transparent border-none focus:ring-0 text-sm text-slate-900 w-full p-0 placeholder:text-slate-500" placeholder="Email Address" type="email"/>
+                    <button class="material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors">arrow_forward</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-16 mt-16 pt-8 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+            <p class="font-label uppercase tracking-widest">© 2026 POPULAR WATCHES NAGPUR. ALL RIGHTS RESERVED.</p>
+            <div class="flex gap-8">
+                <a href="#" class="hover:text-slate-900">TERMS</a>
+                <a href="#" class="hover:text-slate-900">PRIVACY</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/inquiries.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Load New Arrivals dynamically
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('new-arrivals-grid');
+            if (grid) {
+                const arrivals = getNewArrivals().slice(0, 4); // limit to 4
+                let arrivalsHTML = '';
+                
+                arrivals.forEach(watch => {
+                    arrivalsHTML += `
+                        <div class="card-hover bg-white border border-slate-200 p-4 flex flex-col cursor-pointer group" onclick="window.location.href='product.html?id=${watch.id}'">
+                            <div class="aspect-[3/4] overflow-hidden bg-slate-100 mb-5 border border-slate-200/30 relative zoom-hover">
+                                <img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="${watch.image}" alt="${watch.name}">
+                                <div class="absolute top-3 left-3 bg-[#f2ca50] text-slate-900 font-bold text-[9px] tracking-widest uppercase px-2 py-0.5">NEW</div>
+                            </div>
+                            <p class="font-label text-[10px] text-gray-400 tracking-widest mb-1 uppercase">${watch.maison}</p>
+                            <h3 class="font-headline text-sm text-[#f2ca50] group-hover:text-slate-900 transition-colors truncate mb-2">TIMEPIECE</h3>
+                            <p class="font-body text-sm text-slate-500">Discover an exclusive timepiece</p>
+                        </div>
+                    `;
+                });
+                grid.innerHTML = arrivalsHTML;
+            }
+        });
+    </script>
+</body>
+</html>

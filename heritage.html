@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Our Legacy &amp; Workshop | Popular Watches Nagpur</title>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "primary": "#f2ca50",
+              "on-primary": "#131313",
+              "surface": "#1e1f20",
+              "background": "#131313"
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-[#ffe088] selection:text-slate-900">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 md:px-16 py-6 max-w-[1440px] mx-auto">
+            <a class="font-headline text-lg tracking-tighter text-[#f2ca50] glow-text-gold uppercase" href="index.html">
+                POPULAR WATCHES
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="index.html">Home</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="catalog.html">Catalog</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="heritage.html">Heritage</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="services.html">Services</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="cart-btn material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors duration-300 p-1">shopping_bag</button>
+                <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-[#f2ca50] p-1">menu</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-panel" class="fixed inset-y-0 right-0 z-50 w-64 bg-white border-l border-slate-200 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6 space-y-8">
+        <div class="flex justify-end">
+            <button id="close-mobile-menu-btn" class="material-symbols-outlined text-gray-400 hover:text-slate-900">close</button>
+        </div>
+        <div class="flex flex-col space-y-6">
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="index.html">Home</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="catalog.html">Catalog</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="heritage.html">Heritage</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="services.html">Services</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="dashboard.html">Admin Dashboard</a>
+        </div>
+    </div>
+
+    <!-- Main Heritage & Services Story -->
+    <main class="pt-32 pb-24">
+        
+        <!-- Legacy / Story Section -->
+        <section class="max-w-[1440px] mx-auto px-6 md:px-16 mb-32 reveal active">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="font-label text-xs uppercase tracking-[0.25em] text-[#f2ca50]">ESTABLISHED 1985</span>
+                    <h1 class="font-serif text-4xl md:text-5xl text-slate-900">Three Generations of Trust</h1>
+                    <p class="font-body text-gray-400 text-base leading-relaxed">
+                        For decades, Popular Watches Nagpur has remained the trusted custodian of luxury chronometry in Maharashtra. From a small horological repair counter in Sitabuldi to our state-of-the-art viewing rooms and certified restoration workshops in Civil Lines, our commitment to mechanical precision and collection stewardship has never wavered.
+                    </p>
+                    <div class="flex items-center gap-4 pt-4">
+                        <div class="h-[1px] w-12 bg-slate-300"></div>
+                        <span class="font-serif text-sm italic text-[#f2ca50]">"Every mechanical tick carries our name."</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 border border-slate-200 bg-slate-100 p-4 rounded group overflow-hidden shadow-2xl relative aspect-[16/10]">
+                    <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-750" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqiQj8Nvj1EkuAa9vEA_To5N6eAEvdcrH9CmBOOnTUbrXkoJJNWzY6AKhomwXPcqdlhUhPg9dJlklaNe9rcSKzOtK02uXQ8pg5RHZUkblo8YPpjIhK1yujtxuagCuwkxPcvqKj024Xps9qoYIxIpekz4zM-SKHEO4aCa-0W1qnIIvQNjq0jEA3VhZPWnih5kZyuIJzsn0dXo0_Il26DhC76nh4qUxnaaMHfXEe4nY1ezv5pFGFBJsQcy5ID4gIOaMGY3yJu9tApdo" alt="Boutique heritage room"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Master Horological Workshop Section -->
+        <section id="workshop" class="bg-slate-100 border-y border-slate-200 py-24 reveal">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-16">
+                <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                    <span class="material-symbols-outlined text-4xl text-[#f2ca50] glow-text-gold">settings_suggest</span>
+                    <h2 class="font-headline text-3xl text-slate-900 tracking-widest uppercase">The Master Workshop</h2>
+                    <p class="font-body text-gray-400 text-sm">Where mechanical complexity is met with certified surgical expertise. We preserve and restore luxury assets for future generations.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="card-hover bg-white border border-slate-200 p-8 space-y-6">
+                        <div class="aspect-square bg-slate-50 border border-slate-200 overflow-hidden zoom-hover rounded">
+                            <img class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4Sst0BIt3qpHFAjAbdIZvRgD1F4jzSuid3EqNJeiDKia8P0rW2ekYjkE7c6DuoZ9wo9FOaW7yDlxTzDgncrwwydFAefXeGw2aSki_xNGJxIAAq6tiasUOfaz4mDprKSsilHQkRUJS57sU5sY6d-2vmU2zyQkyOvfyb7uX0LM6XdpMicCYthrqlX39PJE1r3Tcl2vSOtK7F1aR_-Do4Ztl1gWfm9cf2JYAlTRTPseM1t6l85Q431GNl9huX-zAME0AS8m5jB3_pRw" alt="Restoration workshop Adjustments"/>
+                        </div>
+                        <h3 class="font-headline text-lg text-[#f2ca50]">Movement Restoration</h3>
+                        <p class="font-body text-gray-400 text-sm leading-relaxed">
+                            Complete teardown and mechanical rebuilding of antique, automatic, or manual calibres. Every gear is ultrasonic-cleaned, re-oiled, and timed under clinical conditions.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="card-hover bg-white border border-slate-200 p-8 space-y-6">
+                        <div class="aspect-square bg-slate-50 border border-slate-200 overflow-hidden zoom-hover rounded">
+                            <img class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlVNFcTWXA1kBoyDHZqWVIiug8SUvv3aHgD5FGEqnX9bUF26jl6KroORuwRydn1X6Pu_r5mQx0RYzqDC9L-y-uF_ymhkfQYyxWEsoyzbwZ4BJbJuiuT3CXn49LUhgCD-cDNSSxJqsot7wotr_QbBz7NJxi8AELQmT-5jLvgycdklJf_6e0Z5l0dZXagsWKI_gp8ugL1SneR_rsmIKhxcgYv3BKCJo1EeeMD7qIXW-OEWA29SHGPIfiENtuEm3aN2I-Dgg8zCOpm98" alt="Watch tools precision"/>
+                        </div>
+                        <h3 class="font-headline text-lg text-[#f2ca50]">Technical Calibration</h3>
+                        <p class="font-body text-gray-400 text-sm leading-relaxed">
+                            Electronic timing evaluation, micro-regulations, dial hand adjustment, gasket replacement, pressure-testing up to 300 Metres, and precision timing updates.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="card-hover bg-white border border-slate-200 p-8 space-y-6">
+                        <div class="aspect-square bg-slate-50 border border-slate-200 overflow-hidden zoom-hover rounded">
+                            <img class="w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwz-h93R4ak3mcOfz80HGgRkG3nN_GgLl0D5jas5mFDFIK3joMZxz9t2wVKW_DF5YPXzvDy-CB-Fi2F5NVKOWSnPNsDV3qDYxpRJUTwqImA_WMUn_ZoFjsktXHO0QM8isnJ4iYk-g3nRp4FzU1RzPmvOl_SOTU4eEHEkoA8xTcfOjmlrRItgQjAaal3QT2xl7tMtwVo4oqI-40eTSa--hfn4fFt1yYThApgXfRtUxGkV6KCzWlCO3uiPkslnWhIMEkKpXl6cZzfr0" alt="Polishing and aesthetics"/>
+                        </div>
+                        <h3 class="font-headline text-lg text-[#f2ca50]">Dial &amp; Case Polishing</h3>
+                        <p class="font-body text-gray-400 text-sm leading-relaxed">
+                            Expert chamfer restoration and case polishing using professional buffing tools. We return gold or oystersteel frames to their original showroom gloss and beauty.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certified / Authorized Bento Box Section -->
+        <section class="max-w-[1440px] mx-auto px-6 md:px-16 py-24 reveal">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Certifications block -->
+                <div class="lg:col-span-4 bg-[#f2ca50] p-12 text-slate-900 flex flex-col justify-center space-y-6 rounded">
+                    <h2 class="font-headline text-3xl font-bold tracking-widest uppercase">Authorized Care</h2>
+                    <p class="font-body text-sm font-semibold leading-relaxed">
+                        We are certified, state-approved service handlers for the world's most prestigious Swiss houses. Rest assured that all service utilizes 100% original manufacturer parts.
+                    </p>
+                    <ul class="space-y-3 font-label text-xs tracking-widest uppercase font-bold">
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">workspace_premium</span> SWISS CERTIFIED CALIBRATION</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">workspace_premium</span> 100% FACTORY SPARE PARTS</li>
+                        <li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm">workspace_premium</span> INTERNATIONAL WARRANTY PROTECTION</li>
+                    </ul>
+                </div>
+                <!-- Brand Bento Grid -->
+                <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">ROLEX</span>
+                    </div>
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">OMEGA</span>
+                    </div>
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">AUDEMARS PIGUET</span>
+                    </div>
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">CARTIER</span>
+                    </div>
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">TAG HEUER</span>
+                    </div>
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">LONGINES</span>
+                    </div>
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">TISSOT</span>
+                    </div>
+                    <div class="bg-slate-100 border border-slate-200 rounded flex items-center justify-center p-8 hover:bg-white transition-colors group cursor-default">
+                        <span class="font-label text-xs text-gray-400 group-hover:text-[#f2ca50] transition-colors tracking-widest uppercase font-bold">RADO</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book Viewing CTA -->
+        <section class="max-w-[1440px] mx-auto px-6 md:px-16 text-center space-y-8 py-20 reveal">
+            <h2 class="font-serif text-3xl md:text-4xl text-slate-900">Trust Your Asset with Nagpur's Finest</h2>
+            <p class="font-body text-gray-400 max-w-lg mx-auto text-sm">Schedule a showroom appointment at Civil Lines or submit a master restoration inquiry form.</p>
+            <a href="services.html" class="inline-block bg-[#f2ca50] hover:bg-white text-slate-900 px-10 py-4 font-bold text-xs tracking-widest uppercase transition-colors">
+                SUBMIT A SERVICE REQUEST
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-16">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4 space-y-6">
+                <a class="font-headline text-xl text-[#f2ca50] block uppercase tracking-tight" href="index.html">POPULAR WATCHES</a>
+                <p class="font-body text-gray-400 text-sm max-w-sm leading-relaxed">
+                    Nagpur's premier destination for luxury timepieces and horological expertise since 1985. Experience precision, authority, and curation.
+                </p>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COLLECTIONS</h4>
+                <div class="flex flex-col space-y-2.5">
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wristwatch">Wristwatches</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wall Clock">Wall Clocks</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Table Clock">Table Clocks</a>
+                </div>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COMPANY</h4>
+                <div class="flex flex-col space-y-2.5">
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html">Our Story</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html#workshop">Master Workshop</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="services.html">Boutique Services</a>
+                </div>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">newsletter</h4>
+                <div class="flex border-b border-slate-300 pb-1">
+                    <input class="bg-transparent border-none focus:ring-0 text-sm text-slate-900 w-full p-0 placeholder:text-slate-500" placeholder="Email Address" type="email"/>
+                    <button class="material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors">arrow_forward</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-16 mt-16 pt-8 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+            <p class="font-label uppercase tracking-widest">© 2026 POPULAR WATCHES NAGPUR. ALL RIGHTS RESERVED.</p>
+            <div class="flex gap-8">
+                <a href="#" class="hover:text-slate-900">TERMS</a>
+                <a href="#" class="hover:text-slate-900">PRIVACY</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/inquiries.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

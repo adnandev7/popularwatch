@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Timepiece Specifications | Popular Watches Nagpur</title>
+    <!-- Material Symbols -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "primary": "#f2ca50",
+              "on-primary": "#131313",
+              "surface": "#1e1f20",
+              "background": "#131313"
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body class="bg-slate-50 text-slate-900 selection:bg-[#ffe088] selection:text-slate-900">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300">
+        <div class="flex justify-between items-center w-full px-8 md:px-16 py-6 max-w-[1440px] mx-auto">
+            <a class="font-headline text-lg tracking-tighter text-[#f2ca50] glow-text-gold uppercase" href="index.html">
+                POPULAR WATCHES
+            </a>
+            <div class="hidden md:flex items-center gap-10">
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="index.html">Home</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="catalog.html">Catalog</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="heritage.html">Heritage</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="services.html">Services</a>
+                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="dashboard.html">Dashboard</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="cart-btn material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors duration-300 p-1">shopping_bag</button>
+                <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-[#f2ca50] p-1">menu</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-panel" class="fixed inset-y-0 right-0 z-50 w-64 bg-white border-l border-slate-200 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6 space-y-8">
+        <div class="flex justify-end">
+            <button id="close-mobile-menu-btn" class="material-symbols-outlined text-gray-400 hover:text-slate-900">close</button>
+        </div>
+        <div class="flex flex-col space-y-6">
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="index.html">Home</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="catalog.html">Catalog</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="heritage.html">Heritage</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="services.html">Services</a>
+            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="dashboard.html">Admin Dashboard</a>
+        </div>
+    </div>
+
+    <!-- Product Details Content -->
+    <main class="pt-32 min-h-screen pb-24 max-w-[1440px] mx-auto px-6 md:px-16">
+        
+        <!-- Error / Not Found View -->
+        <div id="product-not-found" class="hidden py-32 text-center flex-col items-center justify-center space-y-6 reveal active">
+            <span class="material-symbols-outlined text-7xl text-red-500/80">info</span>
+            <h1 class="font-headline text-3xl text-slate-900 tracking-widest uppercase">Timepiece Not Found</h1>
+            <p class="text-gray-400 text-sm max-w-sm font-body">The watch identifier you requested does not exist or may have been archived from our Nagpur showcase.</p>
+            <a href="catalog.html" class="px-8 py-3 bg-[#f2ca50] text-slate-900 font-bold text-xs tracking-widest uppercase hover:bg-white transition-colors">
+                RETURN TO CATALOG
+            </a>
+        </div>
+
+        <!-- Valid Product Details View -->
+        <div id="product-details-view" class="hidden">
+            <!-- Product Intro Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24 reveal active">
+                
+                <!-- Product Studio Image -->
+                <div class="border border-slate-200 bg-slate-100 p-8 aspect-[4/5] flex items-center justify-center relative overflow-hidden group">
+                    <img id="watch-detail-image" class="max-h-full max-w-full object-contain filter group-hover:scale-105 transition-transform duration-750" src="" alt="Timepiece presentation"/>
+                </div>
+
+                <!-- Product Details Header & Meta -->
+                <div class="space-y-8">
+                    <div class="space-y-3">
+                        <span id="watch-detail-maison" class="font-label text-xs text-[#f2ca50] tracking-[0.25em] uppercase block">MAISON</span>
+                        <h1 id="watch-detail-name" class="font-serif text-4xl md:text-5xl text-slate-900 leading-tight">TIMEPIECE</h1>
+                        <div class="flex items-center gap-4 text-xs font-label tracking-widest text-gray-500 uppercase mt-2">
+                            <span id="watch-detail-category">Wristwatch</span>
+                            <span>•</span>
+                            <span id="watch-detail-ref">REF ID</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <p class="font-label text-[10px] text-gray-400 uppercase tracking-widest">SHOWROOM ACQUISITION VALUE</p>
+                        <span id="watch-detail-price" class="text-3xl font-headline font-semibold text-[#f2ca50] tracking-tight">CONTACT FOR PRICE</span>
+                    </div>
+
+                    <div class="h-[1px] bg-slate-200 w-full"></div>
+
+                    <p id="watch-detail-description" class="font-body text-gray-300 text-base leading-relaxed">
+                        Detailed watchmaking description of the craftsmanship, historical significance, and design details.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button id="add-to-cart-direct-btn" class="flex-1 bg-[#f2ca50] hover:bg-white text-slate-900 py-4.5 text-center font-bold text-xs tracking-[0.2em] uppercase transition-all duration-300 flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm">add_shopping_cart</span> ADD TO INQUIRY BAG
+                        </button>
+                        <a href="#inquiry-form-section" class="flex-1 bg-transparent hover:bg-white border border-[#4d4635] text-slate-900 py-4.5 text-center font-bold text-xs tracking-[0.2em] uppercase transition-colors flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm">mail</span> DIRECT INQUIRY
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Specifications Grid -->
+            <div class="bg-slate-100 border border-slate-200 p-8 md:p-12 mb-24 reveal">
+                <h2 class="font-headline text-2xl text-slate-900 mb-10 tracking-widest uppercase border-b border-slate-200 pb-4">Technical Specifications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6 text-sm">
+                    <div class="flex justify-between items-center border-b border-slate-200 py-3">
+                        <span class="text-gray-500 font-label tracking-widest uppercase text-xs">Calibre</span>
+                        <span id="spec-calibre" class="text-slate-900 font-body">Detail</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-200 py-3">
+                        <span class="text-gray-500 font-label tracking-widest uppercase text-xs">Winding Mechanisms</span>
+                        <span id="spec-winding" class="text-slate-900 font-body">Detail</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-200 py-3">
+                        <span class="text-gray-500 font-label tracking-widest uppercase text-xs">Power Reserve</span>
+                        <span id="spec-power" class="text-slate-900 font-body">Detail</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-200 py-3">
+                        <span class="text-gray-500 font-label tracking-widest uppercase text-xs">Case Diameter</span>
+                        <span id="spec-diameter" class="text-slate-900 font-body">Detail</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-200 py-3">
+                        <span class="text-gray-500 font-label tracking-widest uppercase text-xs">Noble Material</span>
+                        <span id="spec-material" class="text-slate-900 font-body">Detail</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-200 py-3">
+                        <span class="text-gray-500 font-label tracking-widest uppercase text-xs">Water Resistance</span>
+                        <span id="spec-waterproof" class="text-slate-900 font-body">Detail</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-slate-200/30 py-3 md:col-span-2">
+                        <span class="text-gray-500 font-label tracking-widest uppercase text-xs">Strap / Bracelet Layout</span>
+                        <span id="spec-strap" class="text-slate-900 font-body">Detail</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Product Cards -->
+            <section class="mb-24 reveal">
+                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+                    <div>
+                        <span class="font-label text-xs text-[#f2ca50] uppercase tracking-[0.25em]">Recommended Selection</span>
+                        <h2 class="font-headline text-3xl text-slate-900 tracking-tight mt-3">Explore Similar Timepieces</h2>
+                        <p class="font-body text-gray-400 text-sm mt-2 max-w-2xl">Discover complementary pieces curated alongside the current model, from modern divers to refined dress watches.</p>
+                    </div>
+                    <a href="catalog.html" class="inline-flex items-center justify-center rounded-full border border-[#4d4635] bg-transparent px-6 py-3 text-xs uppercase tracking-[0.2em] text-[#f2ca50] hover:bg-white transition-colors">View full catalog</a>
+                </div>
+
+                <div id="related-products-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"></div>
+            </section>
+
+            <!-- Direct Inquiry Form Section -->
+            <div id="inquiry-form-section" class="max-w-2xl mx-auto bg-slate-100 border border-slate-200 p-8 md:p-12 reveal">
+                <div class="text-center mb-8">
+                    <span class="material-symbols-outlined text-4xl text-[#f2ca50] mb-3">mark_as_unread</span>
+                    <h2 class="font-headline text-xl text-slate-900 tracking-widest uppercase">DIRECT TIMEPIECE INQUIRY</h2>
+                    <p class="text-gray-400 text-xs mt-1.5 font-body">Inquire about stock status, custom box sets, or showroom appointments in Civil Lines.</p>
+                </div>
+
+                <form id="product-inquiry-form" class="space-y-6">
+                    <!-- Hidden fields to attach watch context -->
+                    <input type="hidden" id="prod-watch-id">
+                    <input type="hidden" id="prod-watch-name">
+                    <input type="hidden" id="prod-watch-maison">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="block text-[11px] font-semibold text-gray-400 uppercase tracking-widest" for="prod-inquirer-name">FULL NAME</label>
+                            <input required id="prod-inquirer-name" type="text" class="w-full bg-white border border-slate-200 focus:border-[#f2ca50] rounded px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-0">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-[11px] font-semibold text-gray-400 uppercase tracking-widest" for="prod-inquirer-email">EMAIL ADDRESS</label>
+                            <input required id="prod-inquirer-email" type="email" class="w-full bg-white border border-slate-200 focus:border-[#f2ca50] rounded px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-0">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="block text-[11px] font-semibold text-gray-400 uppercase tracking-widest" for="prod-message">INQUIRY MEMO</label>
+                        <textarea required id="prod-message" rows="4" class="w-full bg-white border border-slate-200 focus:border-[#f2ca50] rounded px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-0" placeholder="Please describe your specific interest in this timepiece. If scheduling an appointment at Civil Lines, please suggest preferred dates."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-[#f2ca50] hover:bg-white text-slate-900 py-4 text-center font-bold text-xs tracking-widest uppercase transition-all duration-300">
+                        SUBMIT PRIVATE INQUIRY
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-16">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4 space-y-6">
+                <a class="font-headline text-xl text-[#f2ca50] block uppercase tracking-tight" href="index.html">POPULAR WATCHES</a>
+                <p class="font-body text-gray-400 text-sm max-w-sm leading-relaxed">
+                    Nagpur's premier destination for luxury timepieces and horological expertise since 1985. Experience precision, authority, and curation.
+                </p>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COLLECTIONS</h4>
+                <div class="flex flex-col space-y-2.5">
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wristwatch">Wristwatches</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wall Clock">Wall Clocks</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Table Clock">Table Clocks</a>
+                </div>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COMPANY</h4>
+                <div class="flex flex-col space-y-2.5">
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html">Our Legacy</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html#workshop">Master Workshop</a>
+                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="services.html">Boutique Services</a>
+                </div>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">newsletter</h4>
+                <div class="flex border-b border-slate-300 pb-1">
+                    <input class="bg-transparent border-none focus:ring-0 text-sm text-slate-900 w-full p-0 placeholder:text-slate-500" placeholder="Email Address" type="email"/>
+                    <button class="material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors">arrow_forward</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-[1440px] mx-auto px-6 md:px-16 mt-16 pt-8 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
+            <p class="font-label uppercase tracking-widest">© 2026 POPULAR WATCHES NAGPUR. ALL RIGHTS RESERVED.</p>
+            <div class="flex gap-8">
+                <a href="#" class="hover:text-slate-900">TERMS</a>
+                <a href="#" class="hover:text-slate-900">PRIVACY</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/inquiries.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const watchId = params.get('id');
+            const watch = watchId ? getTimepieceById(watchId) : null;
+
+            const notFoundEl = document.getElementById('product-not-found');
+            const detailsEl = document.getElementById('product-details-view');
+
+            if (!watch) {
+                notFoundEl.classList.remove('hidden');
+                notFoundEl.classList.add('flex');
+                return;
+            }
+
+            notFoundEl.classList.add('hidden');
+            detailsEl.classList.remove('hidden');
+
+            // Populate page headers and dynamic specs
+            document.title = 'Timepiece Specifications | Popular Watches Nagpur';
+            
+            document.getElementById('watch-detail-image').src = watch.image;
+            document.getElementById('watch-detail-image').alt = "Timepiece presentation";
+            
+            document.getElementById('watch-detail-maison').textContent = watch.maison;
+            document.getElementById('watch-detail-name').textContent = "TIMEPIECE";
+            document.getElementById('watch-detail-category').textContent = watch.category;
+            document.getElementById('watch-detail-ref').textContent = `REF: NGP-${watch.id.toUpperCase()}-2026`;
+            document.getElementById('watch-detail-price').textContent = "CONTACT FOR PRICE";
+            document.getElementById('watch-detail-description').textContent = watch.description;
+
+            // Spec grid values
+            document.getElementById('spec-calibre').textContent = watch.specs.calibre;
+            document.getElementById('spec-winding').textContent = watch.specs.winding;
+            document.getElementById('spec-power').textContent = watch.specs.powerReserve;
+            document.getElementById('spec-diameter').textContent = watch.specs.diameter;
+            document.getElementById('spec-material').textContent = watch.specs.material;
+            document.getElementById('spec-waterproof').textContent = watch.specs.waterproof;
+            document.getElementById('spec-strap').textContent = watch.specs.strap;
+
+            // Direct Cart Action Binding
+            document.getElementById('add-to-cart-direct-btn').addEventListener('click', () => {
+                addToCart(watch.id);
+            });
+
+            // Form hidden values loading
+            document.getElementById('prod-watch-id').value = watch.id;
+            document.getElementById('prod-watch-name').value = watch.name;
+            document.getElementById('prod-watch-maison').value = watch.maison;
+
+            renderRelatedProducts(watch.id, 8);
+        });
+
+        function renderRelatedProducts(currentId, limit = 8) {
+            const grid = document.getElementById('related-products-grid');
+            const related = getAllTimepieces()
+                .filter((item) => item.id !== currentId)
+                .slice(0, limit);
+
+            const html = related.map((watch) => `
+                <article class="bg-white border border-slate-200 overflow-hidden group">
+                    <a href="product.html?id=${watch.id}" class="block">
+                        <div class="aspect-[3/4] overflow-hidden bg-slate-100 border-b border-slate-200/30">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="${watch.image}" alt="${watch.name}">
+                        </div>
+                        <div class="p-5 space-y-3">
+                            <span class="font-label text-[10px] text-gray-400 tracking-widest uppercase">${watch.maison}</span>
+                            <h3 class="font-headline text-lg text-[#f2ca50] group-hover:text-slate-900 transition-colors">TIMEPIECE</h3>
+                            <p class="font-body text-sm text-gray-300">${watch.description}</p>
+                            <p class="font-body text-sm text-slate-500 mt-3">Available on request</p>
+                        </div>
+                    </a>
+                </article>
+            `).join('');
+
+            grid.innerHTML = html;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.glow-text-gold {
+  text-shadow: 0 0 18px rgba(242, 202, 80, 0.35);
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+}
+.zoom-hover img {
+  transition: transform 0.7s ease;
+}
