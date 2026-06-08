@@ -7,3 +7,269 @@
 .zoom-hover img {
   transition: transform 0.7s ease;
 }
+
+:root {
+  --pw-background: #071426; /* deep navy */
+  --pw-surface: #0f2330; /* dark surface */
+  --pw-gold: #d4b45a; /* elegant gold */
+  --pw-muted: #9aa3ab; /* muted text */
+}
+
+/* Typography: premium serif for headings, clean sans for body */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600;700;900&display=swap");
+
+:root {
+  --heading-font: "Playfair Display", Georgia, serif;
+  --body-font:
+    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  --text-primary: #081426; /* near-black for headings */
+  --text-body: #334155; /* slate-700 */
+  --text-muted-2: #6b7280; /* slate-500 */
+}
+
+html {
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+/* Headline styles */
+.font-headline {
+  font-family: var(--heading-font) !important;
+  color: var(--text-primary) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.04 !important;
+}
+
+.font-serif {
+  font-family: var(--heading-font) !important;
+}
+
+/* Body text */
+.font-body {
+  font-family: var(--body-font) !important;
+  color: var(--text-body) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+
+/* Small labels and meta */
+.font-label {
+  font-family: var(--body-font) !important;
+  font-weight: 600 !important;
+  color: var(--pw-gold) !important;
+  letter-spacing: 0.18em !important;
+  font-size: 0.7rem !important;
+}
+
+/* Responsive headline sizing (clamped) */
+.font-headline {
+  font-size: clamp(1.25rem, 4vw + 0.5rem, 3.5rem);
+}
+.font-headline.text-5xl {
+  font-size: clamp(2rem, 6vw + 0.5rem, 4.5rem);
+}
+.font-headline.text-7xl {
+  font-size: clamp(3rem, 8vw + 0.5rem, 6rem);
+}
+
+/* Improved link typography */
+a {
+  text-decoration: none;
+}
+.nav-link {
+  font-weight: 600;
+}
+.nav-link,
+.font-body a {
+  color: var(--pw-muted);
+}
+
+/* Muted text helper */
+.muted {
+  color: var(--text-muted-2) !important;
+}
+
+body.site-dark {
+  background: var(--pw-background) !important;
+  color: #e6e6e6 !important;
+}
+
+.glass-nav {
+  background: linear-gradient(
+    180deg,
+    rgba(12, 24, 48, 0.65),
+    rgba(12, 24, 48, 0.48)
+  );
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 18px 60px rgba(3, 8, 12, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: 2px solid rgba(212, 180, 90, 0.15);
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(212, 180, 90, 0.08),
+    transparent 40%
+  );
+  color: var(--pw-gold);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.brand-title {
+  margin-left: 10px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+}
+
+.nav-link {
+  font-size: 1rem !important;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #f4ebd6;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease,
+    background-color 0.25s ease;
+  position: relative;
+  padding: 0.85rem 1.2rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+}
+.nav-link:hover {
+  color: var(--pw-gold);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+.nav-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: var(--pw-gold);
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 60%;
+}
+
+/* Mobile panel dark style */
+#mobile-nav-panel {
+  background: linear-gradient(
+    180deg,
+    var(--pw-surface),
+    rgba(15, 35, 48, 0.95)
+  );
+  color: #e6e6e6;
+}
+
+/* Accent button */
+.btn-gold {
+  background: var(--pw-gold);
+  color: #081421;
+}
+
+/* Ensure footer contrasts */
+footer {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 15, 32, 0.96),
+    rgba(12, 22, 40, 0.98)
+  );
+  color: #d2cabf;
+}
+footer a {
+  color: #d9cfae;
+}
+footer a:hover {
+  color: var(--pw-gold);
+}
+footer .font-headline {
+  color: #f7e9c9;
+}
+footer .font-body,
+footer p,
+footer .font-label,
+footer h4,
+footer a {
+  color: #c8c2b7;
+}
+footer .font-label {
+  color: #f2ca50 !important;
+}
+footer .newsletter-input {
+  color: #f8f2e6;
+}
+footer input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+footer .border-t {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Pill-shaped / rounded UI elements */
+.rounded-pill {
+  border-radius: 9999px !important;
+}
+
+/* Ensure common interactive elements appear pill-shaped */
+button,
+.btn-gold,
+.cart-btn,
+.material-symbols-outlined {
+  border-radius: 9999px;
+}
+
+/* Nav link spacing is handled in the main nav-link rule above */
+
+/* Make search / inputs pill-shaped */
+input[type="text"],
+input[type="email"],
+.relative input,
+.w-64 {
+  border-radius: 9999px;
+}
+
+/* Make small cards softer (rounded but not full pill) */
+.card-hover {
+  border-radius: 14px;
+  overflow: hidden;
+}
+.card-hover .aspect-[3/4] {
+  border-radius: 12px;
+}
+
+/* Mobile nav items as pills */
+#mobile-nav-panel .flex.flex-col a {
+  padding: 10px 14px;
+  border-radius: 9999px;
+}
+
+/* Hero CTA and other CTAs that use background should look pill-shaped */
+a.rounded-pill {
+  display: inline-block;
+}
+
+/* Newsletter input + button grouping */
+.newsletter-input {
+  border-radius: 9999px;
+}
+.newsletter-input + .material-symbols-outlined {
+  border-radius: 9999px;
+}

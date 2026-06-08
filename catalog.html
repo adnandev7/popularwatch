@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Curated Horology Catalog | Popular Watches Nagpur</title>
     <!-- Material Symbols -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
@@ -13,355 +16,632 @@
         darkMode: "class",
         theme: {
           extend: {
-            "colors": {
-              "primary": "#f2ca50",
+            colors: {
+              primary: "#f2ca50",
               "on-primary": "#131313",
-              "surface": "#1e1f20",
-              "background": "#131313"
-            }
-          }
-        }
-      }
+              surface: "#1e1f20",
+              background: "#131313",
+            },
+          },
+        },
+      };
     </script>
     <!-- Custom CSS -->
-    <link href="css/main.css" rel="stylesheet"/>
-</head>
-<body class="bg-slate-50 text-slate-900 selection:bg-[#ffe088] selection:text-slate-900">
-
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 selection:bg-[#ffe088] selection:text-slate-900"
+  >
     <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300">
-        <div class="flex justify-between items-center w-full px-8 md:px-16 py-6 max-w-[1440px] mx-auto">
-            <a class="font-headline text-lg tracking-tighter text-[#f2ca50] glow-text-gold uppercase" href="index.html">
-                POPULAR WATCHES
-            </a>
-            <div class="hidden md:flex items-center gap-10">
-                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="index.html">Home</a>
-                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="catalog.html">Catalog</a>
-                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="heritage.html">Heritage</a>
-                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="services.html">Services</a>
-                <a class="font-label text-xs uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50] transition-colors" href="dashboard.html">Dashboard</a>
-            </div>
-            <div class="flex items-center gap-6">
-                <button class="cart-btn material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors duration-300 p-1">shopping_bag</button>
-                <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-[#f2ca50] p-1">menu</button>
-            </div>
+    <nav
+      class="fixed top-4 left-4 right-4 z-50 glass-nav border border-slate-200/20 shadow-xl rounded-full transition-all duration-300"
+    >
+      <div
+        class="flex justify-between items-center w-full px-6 md:px-10 py-4 max-w-[1440px] mx-auto"
+      >
+        <a class="flex items-center" href="index.html">
+          <span class="brand-mark">PW</span>
+          <span
+            class="brand-title font-headline text-lg tracking-tighter text-white glow-text-gold uppercase"
+            >POPULAR WATCHES</span
+          >
+        </a>
+        <div class="hidden md:flex items-center gap-4">
+          <a
+            class="nav-link uppercase tracking-widest transition-colors"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="nav-link uppercase tracking-widest transition-colors"
+            href="catalog.html"
+            >Catalog</a
+          >
+          <a
+            class="nav-link uppercase tracking-widest transition-colors"
+            href="index.html#showroom"
+            >Showroom</a
+          >
+          <a
+            class="nav-link uppercase tracking-widest transition-colors"
+            href="index.html#contact"
+            >Contact</a
+          >
         </div>
+        <div class="flex items-center gap-4">
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden material-symbols-outlined text-[#f2ca50] p-1"
+          >
+            menu
+          </button>
+        </div>
+      </div>
     </nav>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-nav-panel" class="fixed inset-y-0 right-0 z-50 w-64 bg-white border-l border-slate-200 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6 space-y-8">
-        <div class="flex justify-end">
-            <button id="close-mobile-menu-btn" class="material-symbols-outlined text-gray-400 hover:text-slate-900">close</button>
-        </div>
-        <div class="flex flex-col space-y-6">
-            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="index.html">Home</a>
-            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="catalog.html">Catalog</a>
-            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="heritage.html">Heritage</a>
-            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="services.html">Services</a>
-            <a class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]" href="dashboard.html">Admin Dashboard</a>
-        </div>
+    <div
+      id="mobile-nav-panel"
+      class="fixed inset-y-0 right-0 z-50 w-64 bg-white border-l border-slate-200 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col p-6 space-y-8"
+    >
+      <div class="flex justify-end">
+        <button
+          id="close-mobile-menu-btn"
+          class="material-symbols-outlined text-gray-400 hover:text-slate-900"
+        >
+          close
+        </button>
+      </div>
+      <div class="flex flex-col space-y-6">
+        <a
+          class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]"
+          href="index.html"
+          >Home</a
+        >
+        <a
+          class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]"
+          href="catalog.html"
+          >Catalog</a
+        >
+        <a
+          class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]"
+          href="index.html#showroom"
+          >Showroom</a
+        >
+        <a
+          class="font-label text-sm uppercase tracking-widest text-[#b0afae] hover:text-[#f2ca50]"
+          href="index.html#contact"
+          >Contact</a
+        >
+      </div>
     </div>
 
     <!-- Main Catalog View -->
     <main class="pt-32 min-h-screen pb-24 max-w-[1440px] mx-auto px-6 md:px-16">
-        
-        <!-- Page Header -->
-        <div class="mb-12 border-b border-slate-200 pb-8 reveal active flex flex-col md:flex-row md:justify-between md:items-end gap-6">
-            <div>
-                <span class="font-label text-xs text-[#b0afae] uppercase tracking-[0.25em] mb-2 block">Collector's Portfolio</span>
-                <h1 class="font-serif text-4xl md:text-5xl text-slate-900">Curated Watch Catalog</h1>
-                <p class="font-body text-gray-400 mt-2">Browse the epitome of precision, selected for discerning tastes in Nagpur.</p>
-            </div>
-            <div class="flex items-center gap-4">
-                <!-- Search Bar -->
-                <div class="relative w-64 bg-white border border-slate-200 rounded focus-within:border-[#f2ca50] transition-colors">
-                    <span class="material-symbols-outlined absolute left-3 top-2.5 text-gray-500 text-lg">search</span>
-                    <input id="catalog-search" type="text" placeholder="Search brands, references..." class="bg-transparent border-none w-full pl-10 pr-4 py-2 text-sm text-slate-900 focus:ring-0 placeholder:text-slate-500">
-                </div>
-                <span id="pieces-count" class="text-xs text-gray-500 font-label tracking-widest uppercase">0 PIECES</span>
-            </div>
+      <!-- Page Header -->
+      <div
+        class="mb-12 border-b border-slate-200 pb-8 reveal active flex flex-col md:flex-row md:justify-between md:items-end gap-6"
+      >
+        <div>
+          <span
+            class="font-label text-xs text-[#b0afae] uppercase tracking-[0.25em] mb-2 block"
+            >Collector's Portfolio</span
+          >
+          <h1 class="font-serif text-4xl md:text-5xl text-slate-900">
+            Curated Watch Catalog
+          </h1>
+          <p class="font-body text-gray-400 mt-2">
+            Browse the epitome of precision, selected for discerning tastes in
+            Nagpur.
+          </p>
         </div>
-
-        <div class="flex flex-col lg:flex-row gap-12">
-            <!-- Sidebar Filters -->
-            <aside class="w-full lg:w-72 flex-shrink-0 sticky top-32 h-fit bg-slate-100 border border-slate-200 p-8 space-y-10 reveal active">
-                
-                <!-- Category Select -->
-                <div>
-                    <h3 class="font-label text-xs font-bold text-[#f2ca50] tracking-widest uppercase mb-4">Timepiece Type</h3>
-                    <div class="space-y-3" id="category-filters-container">
-                        <label class="flex items-center group cursor-pointer text-sm text-gray-300 hover:text-slate-900">
-                            <input type="checkbox" value="Wristwatch" class="category-checkbox rounded-none border-[#4d4635] bg-transparent text-[#f2ca50] focus:ring-0 w-4 h-4">
-                            <span class="ml-3 font-body">Wristwatches</span>
-                        </label>
-                        <label class="flex items-center group cursor-pointer text-sm text-gray-300 hover:text-slate-900">
-                            <input type="checkbox" value="Table Clock" class="category-checkbox rounded-none border-[#4d4635] bg-transparent text-[#f2ca50] focus:ring-0 w-4 h-4">
-                            <span class="ml-3 font-body">Table Clocks</span>
-                        </label>
-                        <label class="flex items-center group cursor-pointer text-sm text-gray-300 hover:text-slate-900">
-                            <input type="checkbox" value="Wall Clock" class="category-checkbox rounded-none border-[#4d4635] bg-transparent text-[#f2ca50] focus:ring-0 w-4 h-4">
-                            <span class="ml-3 font-body">Wall Clocks</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Brand / Maison Selection -->
-                <div>
-                    <h3 class="font-label text-xs font-bold text-[#f2ca50] tracking-widest uppercase mb-4">Maison / Brand</h3>
-                    <div class="space-y-3" id="brand-filters-container">
-                        <!-- Will load dynamically based on database brands -->
-                    </div>
-                </div>
-
-                <!-- Budget Range Slider -->
-                <div>
-                    <h3 class="font-label text-xs font-bold text-[#f2ca50] tracking-widest uppercase mb-4">Investment Scale</h3>
-                    <input type="range" id="price-slider" min="100000" max="9000000" step="100000" value="9000000" class="w-full h-1 bg-slate-200 appearance-none cursor-pointer accent-[#f2ca50]">
-                    <div class="flex justify-between text-[11px] text-gray-400 font-body mt-3">
-                        <span>₹ 1L</span>
-                        <span id="slider-max-label" class="text-slate-900 font-semibold">₹ 90L+</span>
-                    </div>
-                </div>
-
-                <button onclick="resetFilters()" class="w-full bg-transparent hover:bg-red-900/30 text-gray-400 hover:text-red-300 py-3 border border-slate-300 hover:border-red-800 text-center font-semibold text-xs tracking-widest uppercase transition-all duration-300">
-                    RESET FILTERS
-                </button>
-            </aside>
-
-            <!-- Products Grid Container -->
-            <section class="flex-1">
-                <div id="catalog-products-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 reveal active">
-                    <!-- Loaded dynamically via JS -->
-                </div>
-                
-                <!-- No Results fallback -->
-                <div id="no-results-view" class="hidden py-32 text-center flex-col items-center justify-center space-y-4">
-                    <span class="material-symbols-outlined text-6xl text-gray-600">search_off</span>
-                    <h3 class="text-xl font-headline text-slate-900 tracking-widest uppercase">No Masterpieces Found</h3>
-                    <p class="text-gray-400 text-sm max-w-sm font-body leading-relaxed">We couldn't find any watches matching your search or filters. Try adjusting your query or resetting filters.</p>
-                </div>
-            </section>
+        <div class="flex items-center gap-4">
+          <!-- Search Bar -->
+          <div
+            class="relative w-64 bg-white border border-slate-200 rounded focus-within:border-[#f2ca50] transition-colors"
+          >
+            <span
+              class="material-symbols-outlined absolute left-3 top-2.5 text-gray-500 text-lg"
+              >search</span
+            >
+            <input
+              id="catalog-search"
+              type="text"
+              placeholder="Search brands, references..."
+              class="bg-transparent border-none w-full pl-10 pr-4 py-2 text-sm text-slate-900 focus:ring-0 placeholder:text-slate-500"
+            />
+          </div>
+          <span
+            id="pieces-count"
+            class="text-xs text-gray-500 font-label tracking-widest uppercase"
+            >0 PIECES</span
+          >
         </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Sidebar Filters -->
+        <aside
+          class="w-full lg:w-72 flex-shrink-0 sticky top-32 h-fit bg-slate-100 border border-slate-200 p-8 space-y-10 reveal active"
+        >
+          <!-- Category Select -->
+          <div>
+            <h3
+              class="font-label text-xs font-bold text-[#f2ca50] tracking-widest uppercase mb-4"
+            >
+              Timepiece Type
+            </h3>
+            <div class="space-y-3" id="category-filters-container">
+              <label
+                class="flex items-center group cursor-pointer text-sm text-gray-300 hover:text-slate-900"
+              >
+                <input
+                  type="checkbox"
+                  value="Wristwatch"
+                  class="category-checkbox rounded-none border-[#4d4635] bg-transparent text-[#f2ca50] focus:ring-0 w-4 h-4"
+                />
+                <span class="ml-3 font-body">Wristwatches</span>
+              </label>
+              <label
+                class="flex items-center group cursor-pointer text-sm text-gray-300 hover:text-slate-900"
+              >
+                <input
+                  type="checkbox"
+                  value="Table Clock"
+                  class="category-checkbox rounded-none border-[#4d4635] bg-transparent text-[#f2ca50] focus:ring-0 w-4 h-4"
+                />
+                <span class="ml-3 font-body">Table Clocks</span>
+              </label>
+              <label
+                class="flex items-center group cursor-pointer text-sm text-gray-300 hover:text-slate-900"
+              >
+                <input
+                  type="checkbox"
+                  value="Wall Clock"
+                  class="category-checkbox rounded-none border-[#4d4635] bg-transparent text-[#f2ca50] focus:ring-0 w-4 h-4"
+                />
+                <span class="ml-3 font-body">Wall Clocks</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Brand / Maison Selection -->
+          <div>
+            <h3
+              class="font-label text-xs font-bold text-[#f2ca50] tracking-widest uppercase mb-4"
+            >
+              Maison / Brand
+            </h3>
+            <div class="space-y-3" id="brand-filters-container">
+              <!-- Will load dynamically based on database brands -->
+            </div>
+          </div>
+
+          <!-- Budget Range Slider -->
+          <div>
+            <h3
+              class="font-label text-xs font-bold text-[#f2ca50] tracking-widest uppercase mb-4"
+            >
+              Investment Scale
+            </h3>
+            <input
+              type="range"
+              id="price-slider"
+              min="100000"
+              max="9000000"
+              step="100000"
+              value="9000000"
+              class="w-full h-1 bg-slate-200 appearance-none cursor-pointer accent-[#f2ca50]"
+            />
+            <div
+              class="flex justify-between text-[11px] text-gray-400 font-body mt-3"
+            >
+              <span>₹ 1L</span>
+              <span id="slider-max-label" class="text-slate-900 font-semibold"
+                >₹ 90L+</span
+              >
+            </div>
+          </div>
+
+          <button
+            onclick="resetFilters()"
+            class="w-full bg-transparent hover:bg-red-900/30 text-gray-400 hover:text-red-300 py-3 border border-slate-300 hover:border-red-800 text-center font-semibold text-xs tracking-widest uppercase transition-all duration-300"
+          >
+            RESET FILTERS
+          </button>
+        </aside>
+
+        <!-- Products Grid Container -->
+        <section class="flex-1">
+          <div
+            id="catalog-products-grid"
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 reveal active"
+          >
+            <!-- Loaded dynamically via JS -->
+          </div>
+
+          <!-- No Results fallback -->
+          <div
+            id="no-results-view"
+            class="hidden py-32 text-center flex-col items-center justify-center space-y-4"
+          >
+            <span class="material-symbols-outlined text-6xl text-gray-600"
+              >search_off</span
+            >
+            <h3
+              class="text-xl font-headline text-slate-900 tracking-widest uppercase"
+            >
+              No Masterpieces Found
+            </h3>
+            <p class="text-gray-400 text-sm max-w-sm font-body leading-relaxed">
+              We couldn't find any watches matching your search or filters. Try
+              adjusting your query or resetting filters.
+            </p>
+          </div>
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-16">
-        <div class="max-w-[1440px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12">
-            <div class="md:col-span-4 space-y-6">
-                <a class="font-headline text-xl text-[#f2ca50] block uppercase tracking-tight" href="index.html">POPULAR WATCHES</a>
-                <p class="font-body text-gray-400 text-sm max-w-sm leading-relaxed">
-                    Nagpur's premier destination for luxury timepieces and horological expertise since 1985. Experience precision, authority, and curation.
-                </p>
-            </div>
-            <div class="md:col-span-3 space-y-4">
-                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COLLECTIONS</h4>
-                <div class="flex flex-col space-y-2.5">
-                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wristwatch">Wristwatches</a>
-                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Wall Clock">Wall Clocks</a>
-                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="catalog.html?category=Table Clock">Table Clocks</a>
-                </div>
-            </div>
-            <div class="md:col-span-3 space-y-4">
-                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">COMPANY</h4>
-                <div class="flex flex-col space-y-2.5">
-                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html">Our Story</a>
-                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="heritage.html#workshop">Master Workshop</a>
-                    <a class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm" href="services.html">Boutique Services</a>
-                </div>
-            </div>
-            <div class="md:col-span-2 space-y-4">
-                <h4 class="font-label text-xs uppercase tracking-widest text-slate-900">newsletter</h4>
-                <div class="flex border-b border-slate-300 pb-1">
-                    <input class="bg-transparent border-none focus:ring-0 text-sm text-slate-900 w-full p-0 placeholder:text-slate-500" placeholder="Email Address" type="email"/>
-                    <button class="material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors">arrow_forward</button>
-                </div>
-            </div>
+    <footer class="bg-footer border-t border-slate-200/20 py-16 text-slate-100">
+      <div
+        class="max-w-[1440px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-12 gap-12"
+      >
+        <div class="md:col-span-4 space-y-6">
+          <a
+            class="font-headline text-xl text-white block uppercase tracking-tight"
+            href="index.html"
+            >POPULAR WATCHES</a
+          >
+          <p class="font-body text-slate-300 text-sm max-w-sm leading-relaxed">
+            Discover a curated collection of luxury wristwear and statement wall
+            clocks, designed for collectors who seek refinement, heritage, and a
+            subtle show of elegance.
+          </p>
         </div>
-        <div class="max-w-[1440px] mx-auto px-6 md:px-16 mt-16 pt-8 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4">
-            <p class="font-label uppercase tracking-widest">© 2026 POPULAR WATCHES NAGPUR. ALL RIGHTS RESERVED.</p>
-            <div class="flex gap-8">
-                <a href="#" class="hover:text-slate-900">TERMS</a>
-                <a href="#" class="hover:text-slate-900">PRIVACY</a>
-            </div>
+        <div class="md:col-span-3 space-y-4">
+          <h4
+            class="font-label text-xs uppercase tracking-widest text-slate-900"
+          >
+            COLLECTIONS
+          </h4>
+          <div class="flex flex-col space-y-2.5">
+            <a
+              class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm"
+              href="catalog.html?category=Wristwatch"
+              >Wristwatches</a
+            >
+            <a
+              class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm"
+              href="catalog.html?category=Wall Clock"
+              >Wall Clocks</a
+            >
+            <a
+              class="font-body text-gray-400 hover:text-[#f2ca50] transition-colors text-sm"
+              href="catalog.html?category=Table Clock"
+              >Table Clocks</a
+            >
+          </div>
         </div>
+        <div class="md:col-span-3 space-y-4">
+          <h4
+            class="font-label text-xs uppercase tracking-widest text-slate-100"
+          >
+            COMPANY
+          </h4>
+          <div class="flex flex-col space-y-2.5">
+            <a
+              class="font-body text-slate-300 hover:text-[#f2ca50] transition-colors text-sm"
+              href="index.html#showroom"
+              >Showroom</a
+            >
+            <a
+              class="font-body text-slate-300 hover:text-[#f2ca50] transition-colors text-sm"
+              href="index.html#contact"
+              >Contact</a
+            >
+            <a
+              class="font-body text-slate-300 hover:text-[#f2ca50] transition-colors text-sm"
+              href="catalog.html"
+              >Browse Catalog</a
+            >
+          </div>
+        </div>
+        <div class="md:col-span-2 space-y-4">
+          <h4
+            class="font-label text-xs uppercase tracking-widest text-slate-900"
+          >
+            newsletter
+          </h4>
+          <div class="flex border-b border-slate-300 pb-1">
+            <input
+              class="newsletter-input bg-transparent border-none focus:ring-0 text-sm text-slate-100 w-full p-0 placeholder:text-slate-400"
+              placeholder="Email Address"
+              type="email"
+            />
+            <button
+              class="material-symbols-outlined text-[#f2ca50] hover:text-slate-900 transition-colors rounded-pill p-2"
+            >
+              arrow_forward
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1440px] mx-auto px-6 md:px-16 mt-16 pt-8 border-t border-slate-200/40 flex flex-col md:flex-row justify-between items-center text-gray-500 text-xs gap-4"
+      >
+        <p class="font-label uppercase tracking-widest">
+          © 2026 POPULAR WATCHES NAGPUR. ALL RIGHTS RESERVED.
+        </p>
+        <div class="flex gap-8">
+          <a href="#" class="hover:text-slate-900">TERMS</a>
+          <a href="#" class="hover:text-slate-900">PRIVACY</a>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
+    <!-- Floating social buttons (WhatsApp + Instagram) - site-wide -->
+    <div class="fixed left-6 bottom-12 z-50 flex flex-col gap-3">
+      <a
+        aria-label="Buy on WhatsApp"
+        href="https://wa.me/1234567890?text=I%20am%20interested%20in%20your%20collection"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-white/95 hover:bg-white rounded-full p-3 shadow-lg flex items-center justify-center transition-transform transform hover:scale-105"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M20.52 3.48A11.93 11.93 0 0012 0C5.37 0 .11 5.26.02 11.88a11.5 11.5 0 001.85 6.02L0 24l6.35-1.66a11.93 11.93 0 005.65 1.4c6.63 0 11.89-5.26 11.98-11.88a11.9 11.9 0 00-3.46-8.18z"
+            fill="#25D366"
+          />
+          <path
+            d="M17.18 14.03c-.28-.14-1.65-.81-1.9-.9-.25-.1-.43-.14-.62.14-.19.28-.73.9-.9 1.09-.17.19-.34.21-.62.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.66-1.56-1.94-.17-.28-.02-.43.12-.57.12-.12.28-.34.43-.51.15-.17.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.47-.17 0-.36-.02-.55-.02-.19 0-.49.07-.75.35-.25.28-.95.93-.95 2.27s.99 2.64 1.13 2.83c.14.19 1.96 2.98 4.75 4.18 1.6.69 2.52.86 3.4.69.52-.11 1.65-.67 1.88-1.32.23-.66.23-1.22.16-1.33-.07-.11-.25-.17-.53-.31z"
+            fill="#fff"
+          />
+        </svg>
+      </a>
+
+      <a
+        aria-label="Instagram"
+        href="https://www.instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-white/95 hover:bg-white rounded-full p-3 shadow-lg flex items-center justify-center transition-transform transform hover:scale-105"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5"
+            ry="5"
+            stroke="#262626"
+            stroke-width="1.2"
+            fill="none"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="3.2"
+            stroke="#262626"
+            stroke-width="1.2"
+            fill="none"
+          />
+          <circle cx="17.5" cy="6.5" r="0.7" fill="#262626" />
+        </svg>
+      </a>
+    </div>
     <script src="js/products.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/inquiries.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // Catalog logic State
-        let selectedCategories = [];
-        let selectedBrands = [];
-        let maxInvestment = 9000000;
-        let searchQuery = '';
+      // Catalog logic State
+      let selectedCategories = [];
+      let selectedBrands = [];
+      let maxInvestment = 9000000;
+      let searchQuery = "";
 
-        document.addEventListener('DOMContentLoaded', () => {
-            initializeQueryParameters();
-            populateBrandFilters();
-            bindFilterEvents();
-            renderCatalog();
-        });
+      document.addEventListener("DOMContentLoaded", () => {
+        initializeQueryParameters();
+        populateBrandFilters();
+        bindFilterEvents();
+        renderCatalog();
+      });
 
-        // Parse query params to allow deep linking e.g. catalog.html?category=Wristwatch
-        function initializeQueryParameters() {
-            const params = new URLSearchParams(window.location.search);
-            const categoryParam = params.get('category');
-            if (categoryParam) {
-                selectedCategories.push(categoryParam);
-                // check correct checkbox
-                setTimeout(() => {
-                    const cb = document.querySelector(`.category-checkbox[value="${categoryParam}"]`);
-                    if (cb) cb.checked = true;
-                }, 50);
-            }
+      // Parse query params to allow deep linking e.g. catalog.html?category=Wristwatch
+      function initializeQueryParameters() {
+        const params = new URLSearchParams(window.location.search);
+        const categoryParam = params.get("category");
+        if (categoryParam) {
+          selectedCategories.push(categoryParam);
+          // check correct checkbox
+          setTimeout(() => {
+            const cb = document.querySelector(
+              `.category-checkbox[value="${categoryParam}"]`,
+            );
+            if (cb) cb.checked = true;
+          }, 50);
         }
+      }
 
-        // Dynamically pull all unique brands/Maison from database to create filters
-        function populateBrandFilters() {
-            const brandsContainer = document.getElementById('brand-filters-container');
-            if (!brandsContainer) return;
+      // Dynamically pull all unique brands/Maison from database to create filters
+      function populateBrandFilters() {
+        const brandsContainer = document.getElementById(
+          "brand-filters-container",
+        );
+        if (!brandsContainer) return;
 
-            const timepieces = getAllTimepieces();
-            // Get unique brands
-            const brands = [...new Set(timepieces.map(item => item.maison))].sort();
+        const timepieces = getAllTimepieces();
+        // Get unique brands
+        const brands = [
+          ...new Set(timepieces.map((item) => item.maison)),
+        ].sort();
 
-            let brandsHTML = '';
-            brands.forEach(brand => {
-                brandsHTML += `
+        let brandsHTML = "";
+        brands.forEach((brand) => {
+          brandsHTML += `
                     <label class="flex items-center group cursor-pointer text-sm text-gray-300 hover:text-slate-900">
                         <input type="checkbox" value="${brand}" class="brand-checkbox rounded-none border-[#4d4635] bg-transparent text-[#f2ca50] focus:ring-0 w-4 h-4">
                         <span class="ml-3 font-body">${brand}</span>
                     </label>
                 `;
-            });
-            brandsContainer.innerHTML = brandsHTML;
-        }
+        });
+        brandsContainer.innerHTML = brandsHTML;
+      }
 
-        function bindFilterEvents() {
-            // Search Input
-            document.getElementById('catalog-search').addEventListener('input', (e) => {
-                searchQuery = e.target.value.toLowerCase().trim();
-                renderCatalog();
-            });
+      function bindFilterEvents() {
+        // Search Input
+        document
+          .getElementById("catalog-search")
+          .addEventListener("input", (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            renderCatalog();
+          });
 
-            // Category Checkboxes
-            document.addEventListener('change', (e) => {
-                if (e.target.classList.contains('category-checkbox')) {
-                    const val = e.target.value;
-                    if (e.target.checked) {
-                        selectedCategories.push(val);
-                    } else {
-                        selectedCategories = selectedCategories.filter(c => c !== val);
-                    }
-                    renderCatalog();
-                }
-
-                if (e.target.classList.contains('brand-checkbox')) {
-                    const val = e.target.value;
-                    if (e.target.checked) {
-                        selectedBrands.push(val);
-                    } else {
-                        selectedBrands = selectedBrands.filter(b => b !== val);
-                    }
-                    renderCatalog();
-                }
-            });
-
-            // Price Slider
-            const priceSlider = document.getElementById('price-slider');
-            const sliderLabel = document.getElementById('slider-max-label');
-            priceSlider.addEventListener('input', (e) => {
-                maxInvestment = parseInt(e.target.value);
-                sliderLabel.textContent = maxInvestment >= 9000000 ? '₹ 90L+' : formatCurrency(maxInvestment);
-                renderCatalog();
-            });
-        }
-
-        function renderCatalog() {
-            const grid = document.getElementById('catalog-products-grid');
-            const countLabel = document.getElementById('pieces-count');
-            const noResults = document.getElementById('no-results-view');
-            
-            const timepieces = getAllTimepieces();
-
-            // Filter logic
-            const filtered = timepieces.filter(watch => {
-                // Search filter
-                const matchesSearch = watch.name.toLowerCase().includes(searchQuery) || 
-                                      watch.maison.toLowerCase().includes(searchQuery) ||
-                                      watch.category.toLowerCase().includes(searchQuery);
-
-                // Category filter
-                const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(watch.category);
-
-                // Brand filter
-                const matchesBrand = selectedBrands.length === 0 || selectedBrands.includes(watch.maison);
-
-                // Price filter
-                const matchesPrice = watch.price <= maxInvestment;
-
-                return matchesSearch && matchesCategory && matchesBrand && matchesPrice;
-            });
-
-            countLabel.textContent = `${filtered.length} PIECES AVAILABLE`;
-
-            if (filtered.length === 0) {
-                grid.innerHTML = '';
-                noResults.classList.remove('hidden');
-                noResults.classList.add('flex');
-                return;
+        // Category Checkboxes
+        document.addEventListener("change", (e) => {
+          if (e.target.classList.contains("category-checkbox")) {
+            const val = e.target.value;
+            if (e.target.checked) {
+              selectedCategories.push(val);
+            } else {
+              selectedCategories = selectedCategories.filter((c) => c !== val);
             }
+            renderCatalog();
+          }
 
-            noResults.classList.remove('flex');
-            noResults.classList.add('hidden');
+          if (e.target.classList.contains("brand-checkbox")) {
+            const val = e.target.value;
+            if (e.target.checked) {
+              selectedBrands.push(val);
+            } else {
+              selectedBrands = selectedBrands.filter((b) => b !== val);
+            }
+            renderCatalog();
+          }
+        });
 
-            let gridHTML = '';
-            filtered.forEach(watch => {
-                const formattedPrice = formatCurrency(watch.price);
-                gridHTML += `
+        // Price Slider
+        const priceSlider = document.getElementById("price-slider");
+        const sliderLabel = document.getElementById("slider-max-label");
+        priceSlider.addEventListener("input", (e) => {
+          maxInvestment = parseInt(e.target.value);
+          sliderLabel.textContent =
+            maxInvestment >= 9000000 ? "₹ 90L+" : formatCurrency(maxInvestment);
+          renderCatalog();
+        });
+      }
+
+      function renderCatalog() {
+        const grid = document.getElementById("catalog-products-grid");
+        const countLabel = document.getElementById("pieces-count");
+        const noResults = document.getElementById("no-results-view");
+
+        const timepieces = getAllTimepieces();
+
+        // Filter logic
+        const filtered = timepieces.filter((watch) => {
+          // Search filter
+          const matchesSearch =
+            watch.name.toLowerCase().includes(searchQuery) ||
+            watch.maison.toLowerCase().includes(searchQuery) ||
+            watch.category.toLowerCase().includes(searchQuery);
+
+          // Category filter
+          const matchesCategory =
+            selectedCategories.length === 0 ||
+            selectedCategories.includes(watch.category);
+
+          // Brand filter
+          const matchesBrand =
+            selectedBrands.length === 0 ||
+            selectedBrands.includes(watch.maison);
+
+          // Price filter
+          const matchesPrice = watch.price <= maxInvestment;
+
+          return (
+            matchesSearch && matchesCategory && matchesBrand && matchesPrice
+          );
+        });
+
+        countLabel.textContent = `${filtered.length} PIECES AVAILABLE`;
+
+        if (filtered.length === 0) {
+          grid.innerHTML = "";
+          noResults.classList.remove("hidden");
+          noResults.classList.add("flex");
+          return;
+        }
+
+        noResults.classList.remove("flex");
+        noResults.classList.add("hidden");
+
+        let gridHTML = "";
+        filtered.forEach((watch) => {
+          const formattedPrice = formatCurrency(watch.price);
+          gridHTML += `
                     <div class="card-hover bg-white border border-slate-200 p-4 flex flex-col cursor-pointer group select-none relative">
                         <!-- Card Click Navigation -->
                         <div onclick="window.location.href='product.html?id=${watch.id}'">
                             <div class="aspect-[3/4] overflow-hidden bg-slate-100 mb-5 border border-slate-200/30 relative zoom-hover">
                                 <img class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" src="${watch.image}" alt="${watch.name}">
-                                ${watch.newArrival ? '<div class="absolute top-3 left-3 bg-[#f2ca50] text-slate-900 font-bold text-[9px] tracking-widest uppercase px-2 py-0.5">NEW</div>' : ''}
+                                ${watch.newArrival ? '<div class="absolute top-3 left-3 bg-[#f2ca50] text-slate-900 font-bold text-[9px] tracking-widest uppercase px-2 py-0.5">NEW</div>' : ""}
                             </div>
                             <p class="font-label text-[10px] text-gray-400 tracking-widest mb-1 uppercase">${watch.maison}</p>
                             <h3 class="font-headline text-sm text-[#f2ca50] group-hover:text-slate-900 transition-colors truncate mb-2">TIMEPIECE</h3>
                             <p class="font-body text-sm text-slate-500 mb-4">Exclusive piece</p>
                         </div>
                         
-                        <!-- Floating Action Button for Inquiry Bag -->
-                        <button onclick="event.stopPropagation(); addToCart('${watch.id}')" class="absolute bottom-4 right-4 bg-[#f2ca50] text-slate-900 rounded-full p-2.5 shadow-lg border border-black/10 hover:bg-white hover:scale-110 transition-all duration-300 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-lg">add_shopping_cart</span>
-                        </button>
+                        <!-- Compact Buy Now button (redirects to WhatsApp) -->
+                        <a onclick="event.stopPropagation();" href="https://wa.me/1234567890?text=${encodeURIComponent("I am interested in " + watch.name + " (ID: " + watch.id + ")")}" target="_blank" rel="noopener noreferrer" class="absolute bottom-4 right-4 bg-[#f2ca50] text-slate-900 rounded-pill px-3 py-1 shadow-lg border border-black/10 hover:bg-white hover:scale-110 transition-all duration-300 text-xs font-semibold flex items-center justify-center">
+                          Buy Now
+                        </a>
                     </div>
                 `;
-            });
-            grid.innerHTML = gridHTML;
-        }
+        });
+        grid.innerHTML = gridHTML;
+      }
 
-        function resetFilters() {
-            selectedCategories = [];
-            selectedBrands = [];
-            maxInvestment = 9000000;
-            searchQuery = '';
+      function resetFilters() {
+        selectedCategories = [];
+        selectedBrands = [];
+        maxInvestment = 9000000;
+        searchQuery = "";
 
-            // Reset inputs UI
-            document.getElementById('catalog-search').value = '';
-            
-            document.querySelectorAll('.category-checkbox').forEach(cb => cb.checked = false);
-            document.querySelectorAll('.brand-checkbox').forEach(cb => cb.checked = false);
+        // Reset inputs UI
+        document.getElementById("catalog-search").value = "";
 
-            const priceSlider = document.getElementById('price-slider');
-            priceSlider.value = 9000000;
-            document.getElementById('slider-max-label').textContent = '₹ 90L+';
+        document
+          .querySelectorAll(".category-checkbox")
+          .forEach((cb) => (cb.checked = false));
+        document
+          .querySelectorAll(".brand-checkbox")
+          .forEach((cb) => (cb.checked = false));
 
-            renderCatalog();
-        }
+        const priceSlider = document.getElementById("price-slider");
+        priceSlider.value = 9000000;
+        document.getElementById("slider-max-label").textContent = "₹ 90L+";
+
+        renderCatalog();
+      }
     </script>
-</body>
+  </body>
 </html>
